@@ -51,6 +51,32 @@ class MySerializer(serializers.ModelSerializer):
 
 8. Setup the [views](https://docs.djangoproject.com/en/3.0/topics/http/views/)
 9. Setup the [urls](https://docs.djangoproject.com/en/3.0/ref/urls/)
+10. Add a urls.py to the myapp directory (still need to finish description)
+
+When this step is completed, the tree will look like this:
+
+```
+├── db.sqlite3
+├── django_react
+|  ├── asgi.py
+|  ├── settings.py
+|  ├── urls.py
+|  ├── wsgi.py
+|  ├── __init__.py
+|  └── __pycache__
+├── manage.py
+└── myapp
+   ├── admin.py
+   ├── apps.py
+   ├── migrations
+   ├── models.py
+   ├── serializers.py
+   ├── tests.py
+   ├── urls.py
+   ├── views.py
+   ├── __init__.py
+   └── __pycache__
+```
 
 #### React Setup
 
@@ -60,4 +86,4 @@ class MySerializer(serializers.ModelSerializer):
 django-admin startapp frontend
 ```
 
-2. 
+2.
