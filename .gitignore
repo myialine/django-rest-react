@@ -3,3 +3,6 @@
 
 # configs
 /.vscode
+
+#modules
+node_modules
