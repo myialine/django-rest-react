@@ -2,6 +2,41 @@
 
 [Django REST with React.js](https://www.valentinog.com/blog/drf/) as taught by Valentino Gagliardi
 
+## TODO:
+
+- [ ] README
+  - [x] Django Setup
+    - [x] Steps
+    - [x] File tree
+    - [ ] Review
+  - [ ] React Setup
+    - [ ] Steps
+    - [ ] File Tree
+    - [ ] Review
+  - [ ] Add Starter instructions
+    - [ ] Clone
+    - [ ] Install Requirements
+    - [ ] start Django Server
+    - [ ] start React Server
+- [ ] Starter
+  - [x] Django Setup
+  - [x] Django REST Setup
+  - [ ] App creation - backend
+    - [x] Model creation
+    - [x] Model Migration
+    - [x] Views creation
+    - [x] Urls setup in project folder
+    - [x] Urls setup in app folder
+    - [x] Adjustment in settings.py for backend app
+    - [ ] Test server for issues
+  - [ ] App creation - frontend
+    - [x] Views creation
+    - [x] Urls setup in project folder
+    - [x] Urls setup in app folder
+    - [x] Adjustment in settings.py for frontend app
+    - [ ] Component creation
+    - [ ] Test server for issues
+
 ### Step-by-step:
 
 #### Django settup:
