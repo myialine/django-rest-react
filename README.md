@@ -1,8 +1,8 @@
-# django-rest-react
+# django-rest-react <!-- omit in TOC -->
 
 [Django REST with React.js](https://www.valentinog.com/blog/drf/) as taught by Valentino Gagliardi
 
-## TODO:
+# TODO: <!-- omit in TOC -->
 
 - [ ] README
   - [x] Django Setup
@@ -37,28 +37,44 @@
     - [ ] Component creation (optional)
     - [x] Test server for issues
 
-### Clone starter:
+<!-- TOC depthFrom:2 -->
+- [1. Clone starter](#1-clone-starter)
+- [2. Making the starter](#2-making-the-starter)
+  - [2.1 Django configurations](#21-django-configurations)
+    - [2.1.1 Setup Python](#211-setup-python)
+    - [2.1.2 Setup Django](#212-setup-django)
+  - [2.2 React Setup](#22-react-setup)
+    - [2.2.1 Folder structure](#221-folder-structure)
+    - [2.2.2 Install React, webpack, and babel](#222-install-react-webpack-and-babel)
+    - [2.2.3 Configure Frontend](#223-configure-frontend)
 
-### Making the starter Step-by-step:
+<!-- /TOC -->
 
-#### Django settup:
+## 1. Clone starter
 
-1. [Setup Python environment](https://docs.python.org/3/library/venv.html) on your project folder (create and activate it).
-2. Install [Django](https://www.djangoproject.com/download/) and [Django REST](https://www.django-rest-framework.org/).
-3. Start the django project
+## 2. Making the starter
+
+### 2.1 Django configurations
+
+#### 2.1.1 Setup Python
+- [Setup Python environment](https://docs.python.org/3/library/venv.html) on your project folder (create and activate it).
+
+#### 2.1.2 Setup Django
+- Install [Django](https://www.djangoproject.com/download/) and [Django REST](https://www.django-rest-framework.org/).
+- Start the django project
 
 ```
 django-admin startproject my_project
 ```
 
-4. Create a django app from inside your project folder
+- Create a django app from inside your project folder
 
 ```
 cd my_project
 django-admin startapp my_app
 ```
 
-5. Go to `settings.py` and add the app and rest_framework to the INTALLED_APPS array
+- Go to `settings.py` and add the app and rest_framework to the INTALLED_APPS array
 
 ```python
 INSTALLED_APPS = [
@@ -73,8 +89,8 @@ INSTALLED_APPS = [
 ]
 ```
 
-6. Create a [Django Model and run the migrations](https://www.digitalocean.com/community/tutorials/how-to-create-django-models)
-7. Create the serializers
+-  Create a [Django Model and run the migrations](https://www.digitalocean.com/community/tutorials/how-to-create-django-models)
+-  Create the serializers
 
 ```python
 from rest_framework import serializers
@@ -86,9 +102,9 @@ class MySerializer(serializers.ModelSerializer):
     fields = ('id', 'name', 'email')
 ```
 
-8. Setup the [views](https://docs.djangoproject.com/en/3.0/topics/http/views/)
-9. Setup the [urls](https://docs.djangoproject.com/en/3.0/ref/urls/)
-10. Add a urls.py to the myapp directory (still need to finish description)
+-  Setup the [views](https://docs.djangoproject.com/en/3.0/topics/http/views/)
+-  Setup the [urls](https://docs.djangoproject.com/en/3.0/ref/urls/)
+-  Add a urls.py to the myapp directory (still need to finish description)
 
 When this step is completed, the tree will look like this:
 
@@ -115,15 +131,17 @@ When this step is completed, the tree will look like this:
    └── __pycache__
 ```
 
-#### React Setup
+### 2.2 React Setup
 
-1. From the project folder, create a frontend app:
+#### 2.2.1 Folder structure
+
+- From the project folder, create a frontend app:
 
 ```
 django-admin startapp frontend
 ```
 
-2. Create the `src`, `static`, and `templates` folders. Inside `static` and `templates`, create a `frontend` folder.
+- Create the `src`, `static`, and `templates` folders. Inside `static` and `templates`, create a `frontend` folder.
    The diretory structure for this project should look something like this:
 
 ```
@@ -138,8 +156,8 @@ C:\Users\brali\source\repos\django-react\django_react\frontend
 |  └── frontend
 └── __pycache__
 ```
-
-3. Setup [React](https://reactjs.org/), [webpack](https://webpack.js.org/) and [babel](https://babeljs.io/):
+#### 2.2.2 Install React, webpack, and babel
+- Setup [React](https://reactjs.org/), [webpack](https://webpack.js.org/) and [babel](https://babeljs.io/):
    On the frontend folder, using the terminal:
 
 ```
@@ -199,8 +217,9 @@ module.exports = {
 	},
 };
 ```
+#### 2.2.3 Configure Frontend
 
-4. Prepare the frontend
+- Prepare the frontend
    On `./frontend/views.py`:
 
 ```python
