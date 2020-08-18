@@ -2,7 +2,7 @@
 
 [Django REST with React.js](https://www.valentinog.com/blog/drf/) as taught by Valentino Gagliardi
 
-# TODO: <!-- omit in TOC -->
+### TODO: <!-- omit in TOC -->
 
 - [ ] README
   - [x] Django Setup
@@ -18,24 +18,7 @@
     - [ ] Install Requirements
     - [ ] start Django Server
     - [ ] start React Server
-- [ ] Starter
-  - [x] Django Setup
-  - [x] Django REST Setup
-  - [x] App creation - backend
-    - [x] Model creation
-    - [x] Model Migration
-    - [x] Views creation
-    - [x] Urls setup in project folder
-    - [x] Urls setup in app folder
-    - [x] Adjustment in settings.py for backend app
-    - [x] Test server for issues
-  - [x] App creation - frontend
-    - [x] Views creation
-    - [x] Urls setup in project folder
-    - [x] Urls setup in app folder
-    - [x] Adjustment in settings.py for frontend app
-    - [ ] Component creation (optional)
-    - [x] Test server for issues
+
 
 <!-- TOC depthFrom:2 -->
 - [1. Clone starter](#1-clone-starter)
@@ -145,7 +128,6 @@ django-admin startapp frontend
    The diretory structure for this project should look something like this:
 
 ```
-C:\Users\brali\source\repos\django-react\django_react\frontend
 ├── migrations
 |  └── __pycache__
 ├── src
@@ -196,7 +178,7 @@ Create a `.babelrc` file inside `./frontend`:
 
 ```json
 {
-	"presets": ["@babel/preset-env", "@babel/preset-react"]
+"presets": ["@babel/preset-env", "@babel/preset-react"]
 }
 ```
 
