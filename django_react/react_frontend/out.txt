@@ -1,0 +1,14 @@
+C:\Users\brali\source\repos\django-react\django_react\react_frontend
+├── migrations
+|  └── __pycache__
+├── src
+|  └── components
+├── static
+|  └── frontend
+├── templates
+|  └── frontend
+└── __pycache__
+
+directory: 655
+
+ignored: directory (50)

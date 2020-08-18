@@ -21,23 +21,25 @@
 - [ ] Starter
   - [x] Django Setup
   - [x] Django REST Setup
-  - [ ] App creation - backend
+  - [x] App creation - backend
     - [x] Model creation
     - [x] Model Migration
     - [x] Views creation
     - [x] Urls setup in project folder
     - [x] Urls setup in app folder
     - [x] Adjustment in settings.py for backend app
-    - [ ] Test server for issues
-  - [ ] App creation - frontend
+    - [x] Test server for issues
+  - [x] App creation - frontend
     - [x] Views creation
     - [x] Urls setup in project folder
     - [x] Urls setup in app folder
     - [x] Adjustment in settings.py for frontend app
-    - [ ] Component creation
-    - [ ] Test server for issues
+    - [ ] Component creation (optional)
+    - [x] Test server for issues
 
-### Step-by-step:
+### Clone starter:
+
+### Making the starter Step-by-step:
 
 #### Django settup:
 
@@ -121,4 +123,109 @@ When this step is completed, the tree will look like this:
 django-admin startapp frontend
 ```
 
-2.
+2. Create the `src`, `static`, and `templates` folders. Inside `static` and `templates`, create a `frontend` folder.
+   The diretory structure for this project should look something like this:
+
+```
+C:\Users\brali\source\repos\django-react\django_react\frontend
+├── migrations
+|  └── __pycache__
+├── src
+|  └── components
+├── static
+|  └── frontend
+├── templates
+|  └── frontend
+└── __pycache__
+```
+
+3. Setup [React](https://reactjs.org/), [webpack](https://webpack.js.org/) and [babel](https://babeljs.io/):
+   On the frontend folder, using the terminal:
+
+```
+cd ./frontend
+npm init -y
+```
+
+Then install webpack:
+
+```
+npm i webpack webpack-cli --save-dev
+```
+
+Configure scripts for webpack on `package.json`:
+
+```json
+"scripts":{
+  "dev": "webpack --mode development ./src/index.js --output ./static/frontend/main.js",
+  "build": "webpack --mode production ./src/index.js --output ./static/frontend/main.js",
+}
+```
+
+Then install babel:
+
+```
+npm i @babel/core babel-loader @babel/preset-env @babel/preset-react --save-dev
+```
+
+Now install React:
+
+```
+npm i react react-dom --save-dev
+```
+
+Create a `.babelrc` file inside `./frontend`:
+
+```json
+{
+	"presets": ["@babel/preset-env", "@babel/preset-react"]
+}
+```
+
+And then create a `webpack.config.js` with the following:
+
+```javascript
+module.exports = {
+	module: {
+		rules: [
+			{
+				test: /\.js$/,
+				exclude: /node_modules/,
+				use: {
+					loader: "babel-loader",
+				},
+			},
+		],
+	},
+};
+```
+
+4. Prepare the frontend
+   On `./frontend/views.py`:
+
+```python
+from django.shortcuts import render
+
+def index(request):
+    return render(request, 'frontend/index.html')
+```
+
+On `./frontend/templates/frontend/index.html`:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Django REST with React</title>
+</head>
+<body>
+<div id="app">
+    <!-- React will load here -->
+</div>
+</body>
+{% load static %}
+<script src="{% static "frontend/main.js" %}"></script>
+</html>
+```
